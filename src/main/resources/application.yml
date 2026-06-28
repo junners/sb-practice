@@ -1,0 +1,13 @@
+spring:
+  main:
+    log-startup-info: true
+  banner:
+    location: banner.txt
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

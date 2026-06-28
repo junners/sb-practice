@@ -1,0 +1,42 @@
+# Stop searching for .editorconfig files in parent directories
+root = true
+
+# Global settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Standard properties for Kotlin source and script files
+[*.{kt,kts}]
+indent_size = 4
+continuation_indent_size = 4
+
+# Ktlint-specific rules matching official Kotlin styling
+ktlint_code_style = ktlint_official
+ktlint_standard_max_line_length = 120
+
+# IntelliJ/JetBrains specifics to avoid formatting conflicts
+ij_kotlin_imports_layout = *,java.**,javax.**,kotlin.**
+ij_kotlin_name_count_to_use_star_import = 2147483647
+ij_kotlin_name_count_to_use_star_import_for_members = 2147483647
+ij_kotlin_allow_trailing_comma = true
+ij_kotlin_allow_trailing_comma_on_call_site = true
+
+# Specific overrides for your Gradle Kotlin DSL build scripts
+[*.gradle.kts]
+indent_size = 4
+
+# Java source files
+[*.java]
+indent_style = space
+indent_size = 4
+continuation_indent_size = 8
+max_line_length = 120
+
+# Spring Boot YAML configurations & Frontend files
+[*.{yml,yaml,json,md}]
+indent_style = space
+indent_size = 2
